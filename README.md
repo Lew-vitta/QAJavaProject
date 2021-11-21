@@ -1,1 +1,1 @@
-# QAJavaProkect
+# QAJavaProject
