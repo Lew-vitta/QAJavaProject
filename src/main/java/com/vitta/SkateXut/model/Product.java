@@ -8,97 +8,102 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Product")
-public class Product{
-
-
-    @Column(name = "Product_name")
-    private String ProductName;
+public class Product {
 
     @Id
-    @Column(name = "Product_Barcode", unique = true)
-    private int Barcode;
+    @Column(unique = true)
+    private int barcode;
 
-    private String Description;
-    private String Colour;
-    private String Dimentions;
-    private String Materials;
-    private int Stock;
+    @Column
+    private String productName;
 
-    public Product(String product) {
-        ProductName = product;
+    @Column
+    private String description;
+
+    @Column
+    private String colour;
+
+    @Column
+    private String dimentions;
+
+    @Column
+    private String materials;
+
+    @Column
+    private int stock;
+
+    public Product() {
     }
 
-    public Product(String product, int barcode) {
-        super();
-        this.ProductName = product;
-        this.Barcode = barcode;
+    public Product(int barcode, String productName) {
+        this.barcode = barcode;
+        this.productName = productName;
     }
 
-    public Product(String product, int barcode, String description, String colour, String dimentions, String materials, int stock) {
-        super();
-        this.ProductName = product;
-        this.Barcode = barcode;
-        this.Description = description;
-        this.Colour = colour;
-        this.Dimentions = dimentions;
-        this.Materials = materials;
-        this.Stock = stock;
-    }
-
-    public String getProduct() {
-        return ProductName;
-    }
-
-    public void setProduct(String product) {
-        this.ProductName = product;
-
+    public Product(int barcode, String productName, String description, String colour, String dimentions, String materials, int stock) {
+        this.barcode = barcode;
+        this.productName = productName;
+        this.description = description;
+        this.colour = colour;
+        this.dimentions = dimentions;
+        this.materials = materials;
+        this.stock = stock;
     }
 
     public int getBarcode() {
-        return Barcode;
+        return barcode;
     }
 
     public void setBarcode(int barcode) {
-        this.Barcode = barcode;
+        this.barcode = barcode;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        this.Description = description;
+        this.description = description;
     }
 
     public String getColour() {
-        return Colour;
+        return colour;
     }
 
     public void setColour(String colour) {
-        Colour = colour;
+        this.colour = colour;
     }
 
     public String getDimentions() {
-        return Dimentions;
+        return dimentions;
     }
 
     public void setDimentions(String dimentions) {
-        this.Dimentions = dimentions;
+        this.dimentions = dimentions;
     }
 
     public String getMaterials() {
-        return Materials;
+        return materials;
     }
 
     public void setMaterials(String materials) {
-        this.Materials = materials;
+        this.materials = materials;
     }
 
     public int getStock() {
-        return Stock;
+        return stock;
     }
 
     public void setStock(int stock) {
-        this.Stock = stock;
+        this.stock = stock;
     }
 }
+
