@@ -1,6 +1,8 @@
 package com.vitta.SkateXut.model;
 
 
+import org.hibernate.validator.internal.util.logging.formatter.CollectionOfObjectsToStringFormatter;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -42,7 +44,7 @@ public class Product {
 
     public Product(int barcode, String productName, String description, String colour, String dimentions, String materials, int stock) {
         this.barcode = barcode;
-        this.productName = productName;
+        this.productName =  productName;
         this.description = description;
         this.colour = colour;
         this.dimentions = dimentions;

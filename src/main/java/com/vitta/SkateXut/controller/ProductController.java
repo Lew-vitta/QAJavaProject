@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
+import java.util.List;
 
 @RestController
 public class ProductController {
@@ -28,14 +29,20 @@ public class ProductController {
         return this.service.addProduct(product);
     }
 
-    @PutMapping("/update")
-    public ProductDTO updatePerson(@PathParam("id") Integer id, @RequestBody Product product) {
-        return this.service.updateProduct(id, product);
+    // Read all
+    @GetMapping("/readAll")
+    public List<ProductDTO> read() {
+        return service.getAll();
     }
 
 
-    @GetMapping("/test")
-    public String test(){
-        return "hiya";
+    //Update
+
+    //Delete
+    @DeleteMapping("/deleteProduct")
+    public Boolean deleteProduct(@RequestBody int barcode) {
+        return this.service.deleteByBarcode(barcode);
     }
+
+
 }

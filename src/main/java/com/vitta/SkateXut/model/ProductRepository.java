@@ -8,6 +8,5 @@ import com.vitta.SkateXut.model.Product;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer> {
-    public List<Product> findProductByProductName(String productName);
-
+    List<Product> findProductByProductName(String productName);
 }

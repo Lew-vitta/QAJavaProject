@@ -6,14 +6,16 @@ import com.vitta.SkateXut.model.ProductRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductService {
 
     private final ModelMapper mapper;
-    private ProductRepository repo;
+    private final ProductRepository repo;
 
     public ProductService(ProductRepository repo, ModelMapper mapper){
         super();
@@ -32,22 +34,21 @@ public class ProductService {
         // Return last added Person from List
     }
 
-    public ProductDTO updateProduct(Integer barcode, Product newProduct){
-
-        Optional<Product> existingOptional = this.repo.findById(barcode);
-        Product existing = existingOptional.get();
-
-        existing.setProductName(newProduct.getProductName());
-        existing.setBarcode(newProduct.getBarcode());
-        existing.setDescription(newProduct.getDescription());
-        existing.setColour(newProduct.getColour());
-        existing.setDimentions(newProduct.getDimentions());
-        existing.setMaterials(newProduct.getMaterials());
-        existing.setStock(newProduct.getStock());
-
-        Product updated = this.repo.save(existing);
-        return  this.mapToDTO(updated);
+    public List<ProductDTO> getAll(){
+        return this.repo.findAll()
+                .stream().map(this::mapToDTO)
+                .collect(Collectors.toList());
     }
 
+    public Boolean deleteByBarcode(Integer barcode) {
+        if (this.repo.existsById(barcode)) {
+            this.repo.deleteById(barcode);
+        } else {
+            throw new EntityNotFoundException();
+        }
+
+        return !this.repo.existsById(barcode);
+
+    }
 
 }
