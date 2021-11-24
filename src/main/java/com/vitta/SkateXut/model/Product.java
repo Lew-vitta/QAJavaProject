@@ -1,36 +1,42 @@
 package com.vitta.SkateXut.model;
 
 
-import org.hibernate.validator.internal.util.logging.formatter.CollectionOfObjectsToStringFormatter;
+import lombok.*;
+import javax.persistence.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
+@Getter
+@Setter
+@ToString
 @Table(name = "Product")
+@Entity
 public class Product {
 
     @Id
+    @NonNull
     @Column(unique = true)
     private int barcode;
 
+    @NonNull
     @Column
     private String productName;
 
+    @NonNull
     @Column
     private String description;
 
+    @NonNull
     @Column
     private String colour;
 
+    @NonNull
     @Column
     private String dimentions;
 
+    @NonNull
     @Column
     private String materials;
 
+    @NonNull
     @Column
     private int stock;
 
@@ -44,68 +50,12 @@ public class Product {
 
     public Product(int barcode, String productName, String description, String colour, String dimentions, String materials, int stock) {
         this.barcode = barcode;
-        this.productName =  productName;
-        this.description = description;
-        this.colour = colour;
-        this.dimentions = dimentions;
-        this.materials = materials;
-        this.stock = stock;
-    }
-
-    public int getBarcode() {
-        return barcode;
-    }
-
-    public void setBarcode(int barcode) {
-        this.barcode = barcode;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
         this.productName = productName;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getColour() {
-        return colour;
-    }
-
-    public void setColour(String colour) {
         this.colour = colour;
-    }
-
-    public String getDimentions() {
-        return dimentions;
-    }
-
-    public void setDimentions(String dimentions) {
         this.dimentions = dimentions;
-    }
-
-    public String getMaterials() {
-        return materials;
-    }
-
-    public void setMaterials(String materials) {
         this.materials = materials;
-    }
-
-    public int getStock() {
-        return stock;
-    }
-
-    public void setStock(int stock) {
         this.stock = stock;
     }
-}
 
+}
