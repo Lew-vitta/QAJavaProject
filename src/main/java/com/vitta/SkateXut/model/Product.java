@@ -3,15 +3,18 @@ package com.vitta.SkateXut.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Product")
 public class Product{
 
-    @Column(name = "Product_name")
-    private String Product;
 
+    @Column(name = "Product_name")
+    private String ProductName;
+
+    @Id
     @Column(name = "Product_Barcode", unique = true)
     private int Barcode;
 
@@ -22,18 +25,18 @@ public class Product{
     private int Stock;
 
     public Product(String product) {
-        Product = product;
+        ProductName = product;
     }
 
     public Product(String product, int barcode) {
         super();
-        this.Product = product;
+        this.ProductName = product;
         this.Barcode = barcode;
     }
 
     public Product(String product, int barcode, String description, String colour, String dimentions, String materials, int stock) {
         super();
-        this.Product = product;
+        this.ProductName = product;
         this.Barcode = barcode;
         this.Description = description;
         this.Colour = colour;
@@ -43,11 +46,12 @@ public class Product{
     }
 
     public String getProduct() {
-        return Product;
+        return ProductName;
     }
 
     public void setProduct(String product) {
-        Product = product;
+        this.ProductName = product;
+
     }
 
     public int getBarcode() {
@@ -63,7 +67,7 @@ public class Product{
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.Description = description;
     }
 
     public String getColour() {
@@ -87,7 +91,7 @@ public class Product{
     }
 
     public void setMaterials(String materials) {
-        Materials = materials;
+        this.Materials = materials;
     }
 
     public int getStock() {
