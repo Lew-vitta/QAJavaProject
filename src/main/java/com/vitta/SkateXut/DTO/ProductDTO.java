@@ -22,4 +22,14 @@ public class ProductDTO {
     public ProductDTO(){
         super();
     }
+
+    public ProductDTO(int barcode, String productName, String description, String colour, String dimentions, String materials, int stock) {
+        this.Barcode = barcode;
+        this.ProductName = productName;
+        this.Description = description;
+        this.Colour = colour;
+        this.Dimentions = dimentions;
+        this.Materials = materials;
+        this.Stock = stock;
+    }
 }

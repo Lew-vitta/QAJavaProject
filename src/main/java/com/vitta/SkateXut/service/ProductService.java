@@ -26,10 +26,13 @@ public class ProductService {
     }
 
     //create
-    public ProductDTO addProduct(Product product) {
+    public boolean addProduct(Product product) {
         // Add new Person
-        Product saved = this.repo.save(product);
-        return this.mapToDTO(saved);
+        try{repo.save(product);}catch (Exception e){
+            throw new IllegalArgumentException();
+        }
+        ;
+        return true;
         // Return last added Person from List
     }
 
@@ -39,6 +42,19 @@ public class ProductService {
                 .stream().map(this::mapToDTO)
                 .collect(Collectors.toList());
     }
+
+    public List<ProductDTO> getProductByBarcode(int barcode){
+        return this.repo.findById(barcode)
+                .stream().map(this::mapToDTO)
+                .collect(Collectors.toList());
+    }
+
+    public List<ProductDTO> getProductByName(String name){
+        return this.repo.findProductByProductName(name)
+                .stream().map(this::mapToDTO)
+                .collect(Collectors.toList());
+    }
+
     //update
     public boolean updateProduct(int barcode, Product updated) {
         if(deleteByBarcode(barcode)) {

@@ -5,6 +5,8 @@ import com.vitta.SkateXut.model.Product;
 import com.vitta.SkateXut.service.ProductService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -21,31 +23,40 @@ public class ProductController {
 
     // Create Product
     @PostMapping("/addProduct")
-    public ProductDTO addProduct(@RequestBody Product product) {
-        return this.service.addProduct(product);
+    public ResponseEntity<String> addProduct(@RequestBody Product product) {
+        this.service.addProduct(product);
+        return new ResponseEntity<>("New Product Added", HttpStatus.CREATED);
     }
 
     // Read all
     @GetMapping("/readAll")
-    public List<ProductDTO> read() {
-        return service.getAll();
+    public ResponseEntity<List<ProductDTO>> read() {
+        return new ResponseEntity<>(service.getAll(), HttpStatus.ACCEPTED);
     }
 
+    @GetMapping("/readByBarcode")
+    public ResponseEntity<List<ProductDTO>>readByBarcode(@RequestBody int barcode) {
+        return new ResponseEntity<>(service.getProductByBarcode(barcode), HttpStatus.ACCEPTED);
+    }
+
+    @GetMapping("/readByName")
+    public ResponseEntity<List<ProductDTO>> readByName(@RequestBody String name) {
+        return new ResponseEntity<>(service.getProductByName(name), HttpStatus.ACCEPTED);
+    }
 
     //Update
     @PostMapping("/updateProduct/{barcode}")
-    public String update(@PathVariable Integer barcode, @RequestBody Product product) {
+    public ResponseEntity<String> update(@PathVariable Integer barcode, @RequestBody Product product) {
         if (service.updateProduct(barcode, product)) {
-            return "Product Updated";
+            return new ResponseEntity<>("Product Updated", HttpStatus.ACCEPTED);
         }
-        return "Update Failed";
+        return new ResponseEntity<>("Product Update Failed", HttpStatus.NOT_FOUND);
     }
-
 
     //Delete
     @DeleteMapping("/deleteProduct")
-    public Boolean deleteProduct(@RequestBody int barcode) {
-        return this.service.deleteByBarcode(barcode);
+    public ResponseEntity<Boolean> deleteProduct(@RequestBody int barcode) {
+        return new ResponseEntity<>(this.service.deleteByBarcode(barcode), HttpStatus.ACCEPTED);
     }
 
 }
