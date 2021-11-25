@@ -1,19 +1,14 @@
 package com.vitta.SkateXut.DTO;
 
-import com.vitta.SkateXut.model.Product;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
+import org.hibernate.annotations.DynamicUpdate;
 
 @Getter
 @Setter
 @ToString
+@DynamicUpdate
 public class ProductDTO {
 
     private int Barcode;

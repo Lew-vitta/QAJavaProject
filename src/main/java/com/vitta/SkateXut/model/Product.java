@@ -1,6 +1,5 @@
 package com.vitta.SkateXut.model;
 
-
 import lombok.*;
 import javax.persistence.*;
 
