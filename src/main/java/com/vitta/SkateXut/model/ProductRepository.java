@@ -10,6 +10,7 @@ import com.vitta.SkateXut.model.Product;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer> {
     List<Product> findProductByProductName(String productName);
+    @Query(value = "select * from products", nativeQuery = true)
     List<Product> findProductByBarcode(String barcode);
 
 
