@@ -32,27 +32,27 @@ This Query allows a product to be deleted via it's barcode, once again you can s
 ![postman read all](/Documentation/postman8.png)
 
 
-##database
+## Database
 
 Here once the program is restarted we can see the products are still avaliable just as we left them, this is because we defined a file within the project so store data persistently
 ![Database Persistence](/Documentation/SQL1.png)
 
 
 
-##ERD
+## ERD
 
 
-##Test
+## Test
 100% Class Coverage, 81% Line coverage testing
-[Tests](/Documentation/Test.png)
+![Tests](/Documentation/Test.png)
 --------------------------------------------
 
-##Expectation
+## Expectation
 Starting the project I had concerns about using databases, I was used to SQL but hadn't set-up, so I went with H2 as it would be less hassle to set up Within the short time frame. so I could spend more time getting to the meat of the challenge. 
 I expected it to be a challenge as it was my first time attempting a full java project and API. I was also concerned about testing as I know it's usually more time straining than writing the program itself. Doing everything documentation included would be a challenge to all get done in 5 days.
 However, I was hopeful that my existing knowledge of programming would come in handy as I'm no stranger to testing and general concepts. I knew springboot was an entirely different process to traditional methods, but I was excited to gain the skills of properly working through the task.
 
-##What went well/not well
+## What went well/not well
 As expected I ran into lots of issues with H2 and ended up falling into Rabbit holes trying to get it to work both persistently and in memory for testing. But I gained a valuable assest as it allows a nice way to integrate a sql database, without all the set-up I was apprehensive about from a fresh install of mySql
 I spent a lot of time reading over QA Community, documentation, and internet forums. I see this as valuable time both in gaining knowledge and the time spent away from working on the project. But I expected this would be the case when learning a new language and platform.
 I'm happy with the testing, as once the database issues were resolved it was a very nice experience and due to the scope of the project was much faster and allowed me to work on improving every aspect of the project.
