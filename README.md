@@ -60,7 +60,10 @@ I spent a lot of time reading over QA Community, documentation, and internet for
 I'm happy with the testing, as once the database issues were resolved it was a very nice experience and due to the scope of the project was much faster and allowed me to work on improving every aspect of the project.
 
 ##Improvements
-
+In the future I would like to keep creating java and I've learnt a lot from this course and project, I would certainly be able to use this project as a model if I was ever testing or using Spring/APIs or any of the useful tools we learnt along the way.
+I would certainly have more time now knowing how to work with H2, and the general syntax of the dependencies.
+I would like to see myself create more complicated tools and work with other APIs. Generally just more time due to learning more, I could spend implementing more features within the API/Program, but also be able to thoroughly test my project.
+And also do a task that is exciting and more advanced. :) 
 
 
 --------------------------------------------
