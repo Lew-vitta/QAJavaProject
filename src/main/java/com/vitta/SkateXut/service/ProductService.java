@@ -4,6 +4,7 @@ import com.vitta.SkateXut.DTO.ProductDTO;
 import com.vitta.SkateXut.model.Product;
 import com.vitta.SkateXut.model.ProductRepository;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
@@ -15,25 +16,24 @@ public class ProductService {
     private final ModelMapper mapper;
     private final ProductRepository repo;
 
+    @Autowired
     public ProductService(ProductRepository repo, ModelMapper mapper){
         super();
         this.repo = repo;
         this.mapper = mapper;
     }
 
-    private ProductDTO mapToDTO(Product Product) {
-        return this.mapper.map(Product, ProductDTO.class);
+    private ProductDTO mapToDTO(Product product) {
+        return this.mapper.map(product, ProductDTO.class);
     }
 
     //create
     public boolean addProduct(Product product) {
-        // Add new Person
         try{repo.save(product);}catch (Exception e){
             throw new IllegalArgumentException();
         }
         ;
         return true;
-        // Return last added Person from List
     }
 
     //read
@@ -43,16 +43,22 @@ public class ProductService {
                 .collect(Collectors.toList());
     }
 
-    public List<ProductDTO> getProductByBarcode(int barcode){
-        return this.repo.findById(barcode)
-                .stream().map(this::mapToDTO)
-                .collect(Collectors.toList());
+    public ProductDTO getProductByBarcode(Integer barcode) {
+        try {
+            Product product = repo.findProductByBarcode(barcode);
+            return mapToDTO(product);
+        } catch (Exception e) {
+            throw new IllegalArgumentException();
+        }
     }
 
-    public List<ProductDTO> getProductByName(String name){
-        return this.repo.findProductByProductName(name)
-                .stream().map(this::mapToDTO)
-                .collect(Collectors.toList());
+    public ProductDTO getProductByName(String name){
+        try{
+            Product product = repo.findProductByProductName(name);
+            return mapToDTO(product);
+        } catch (Exception e) {
+            throw new IllegalArgumentException();
+        }
     }
 
     //update
@@ -74,5 +80,4 @@ public class ProductService {
         }
         return !this.repo.existsById(barcode);
     }
-
 }

@@ -34,29 +34,27 @@ public class ProductController {
         return new ResponseEntity<>(service.getAll(), HttpStatus.ACCEPTED);
     }
 
-    @GetMapping("/readByBarcode")
-    public ResponseEntity<List<ProductDTO>>readByBarcode(@RequestBody int barcode) {
+    @GetMapping("/readByBarcode/{barcode}")
+    public ResponseEntity<ProductDTO>readByBarcode(@PathVariable int barcode) {
         return new ResponseEntity<>(service.getProductByBarcode(barcode), HttpStatus.ACCEPTED);
     }
 
-    @GetMapping("/readByName")
-    public ResponseEntity<List<ProductDTO>> readByName(@RequestBody String name) {
+    @GetMapping("/readByName/{name}")
+    public ResponseEntity<ProductDTO> readByName(@PathVariable String name) {
         return new ResponseEntity<>(service.getProductByName(name), HttpStatus.ACCEPTED);
     }
 
     //Update
     @PostMapping("/updateProduct/{barcode}")
     public ResponseEntity<String> update(@PathVariable Integer barcode, @RequestBody Product product) {
-        if (service.updateProduct(barcode, product)) {
-            return new ResponseEntity<>("Product Updated", HttpStatus.ACCEPTED);
-        }
-        return new ResponseEntity<>("Product Update Failed", HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(barcode +" Updated", HttpStatus.ACCEPTED);
     }
 
+
     //Delete
-    @DeleteMapping("/deleteProduct")
-    public ResponseEntity<Boolean> deleteProduct(@RequestBody int barcode) {
-        return new ResponseEntity<>(this.service.deleteByBarcode(barcode), HttpStatus.ACCEPTED);
+    @DeleteMapping("/deleteProduct/{barcode}")
+    public ResponseEntity<String> deleteProduct(@PathVariable int barcode) {
+        return new ResponseEntity<>(barcode +" Deleted", HttpStatus.ACCEPTED);
     }
 
 }

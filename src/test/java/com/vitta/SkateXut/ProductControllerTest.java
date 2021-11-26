@@ -41,7 +41,7 @@ public class ProductControllerTest {
         MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders
                 .request(HttpMethod.POST, "/addProduct");
         mockRequest.contentType(MediaType.APPLICATION_JSON);
-        mockRequest.content(this.jsony.writeValueAsString(ProductTestValues.ToyMachineMonster));
+        mockRequest.content(this.jsony.writeValueAsString(ProductTestValues.toyMachineMonster));
         mockRequest.accept(MediaType.APPLICATION_JSON);
 
         ResultMatcher status = MockMvcResultMatchers.status().isCreated();
@@ -88,12 +88,12 @@ public class ProductControllerTest {
         MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders
                 .request(HttpMethod.GET, "/readByName");
         mockRequest.contentType(MediaType.APPLICATION_JSON);
-        mockRequest.content(this.jsony.writeValueAsString(ProductTestValues.AlmostPlacesR7.getProductName()));
+        mockRequest.content(this.jsony.writeValueAsString(ProductTestValues.almostPlacesR7.getProductName()));
         mockRequest.accept(MediaType.APPLICATION_JSON);
 
         ResultMatcher status = MockMvcResultMatchers.status().isAccepted();
         ResultMatcher content = MockMvcResultMatchers.content()
-                .json(this.jsony.writeValueAsString(ProductTestValues.AlmostPlacesR7List));
+                .json(this.jsony.writeValueAsString(ProductTestValues.almostPlacesR7List));
 
         this.mock.perform(mockRequest).andExpect(status).andExpect(content);
 

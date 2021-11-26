@@ -32,4 +32,6 @@ public class ProductDTO {
         this.Materials = materials;
         this.Stock = stock;
     }
+
+
 }
