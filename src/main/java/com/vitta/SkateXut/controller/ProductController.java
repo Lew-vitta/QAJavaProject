@@ -51,12 +51,10 @@ public class ProductController {
             return new ResponseEntity<>(barcode +" Updated", HttpStatus.ACCEPTED);
     }
 
-
     //Delete
     @DeleteMapping("/deleteProduct/{barcode}")
     public ResponseEntity<String> deleteProduct(@PathVariable int barcode) {
         service.deleteByBarcode(barcode);
         return new ResponseEntity<>(barcode +" Deleted", HttpStatus.ACCEPTED);
     }
-
 }
