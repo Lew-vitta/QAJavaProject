@@ -35,7 +35,7 @@ This Query allows a product to be deleted via it's barcode, once again you can s
 ##database
 
 Here once the program is restarted we can see the products are still avaliable just as we left them, this is because we defined a file within the project so store data persistently
-![Database Persistence](/Documentation/SQL1)
+![Database Persistence](/Documentation/SQL1.png)
 
 
 
