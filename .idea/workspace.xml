@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dd37e1c9-4cf7-4164-b25c-a60f491ec4a6" name="Changes" comment="+Start creating Product table">
+      <change afterPath="$PROJECT_DIR$/eeee/.attach_pid238529" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eeee/src/main/java/com/vitta/SkateXut/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eeee/src/main/java/com/vitta/SkateXut/service/ProductServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/.project" beforeDir="false" afterPath="$PROJECT_DIR$/chris/PokePlanner/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/chris/PokePlanner/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/META-INF/maven/com.example/PokePlanner/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/META-INF/maven/com.example/PokePlanner/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/DTO/PokeListDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/DTO/PokeTaskDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/PokePlannerApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/configuration/ApplicationConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/controller/PokeListController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/controller/PokeTasksController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/data/model/PokeList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/data/model/PokeTasks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/data/model/PokeTrainer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/data/respository/PokeListRespository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/data/respository/PokeTaskRespository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/data/respository/PokeTrainerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/exceptions/PokeListNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/exceptions/PokeTasksNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/mappper/PokeListMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/mappper/PokeTasksMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/service/PokeListService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/com/example/demo/service/PokeTasksService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/test-data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/classes/test-schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/DTO/PokeListDTOUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/DTO/PokeTaskDTOUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/PokePlannerApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/controller/PokeListControllerIntegrationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/controller/PokeListControllerUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/controller/PokeTasksControllerIntegrationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/controller/PokeTasksControllerUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/data/model/PokeListUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/data/model/PokeTasksUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/exceptions/PokeListNotFoundExceptionUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/exceptions/PokeTaskNotFoundExceptionUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/mappers/PokeListMapperUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/mappers/PokeTasksMapperUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/service/PokeListServiceIntegrationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/service/PokeListServiceUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/service/PokeTasksServiceIntegrationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chris/PokePlanner/target/test-classes/com/example/demo/service/PokeTasksServiceUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eeee/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eeee/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eeee/src/main/java/com/vitta/SkateXut/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/eeee/src/main/java/com/vitta/SkateXut/model/Product.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/chris" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectId" id="21H6IMohTdvB3fyoaOxph9pZDeU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/eeee" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/vitta/SkateXut" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd37e1c9-4cf7-4164-b25c-a60f491ec4a6" name="Changes" comment="" />
+      <created>1637585584915</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637585584915</updated>
+    </task>
+    <task id="LOCAL-00001" summary="+Added H2 console to application.properties, and added to .gitignore&#10;&#10;+ Created Product Class &#10;&#10;+ Refactored main function">
+      <created>1637726577306</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1637726577306</updated>
+    </task>
+    <task id="LOCAL-00002" summary="+gitignore fix">
+      <created>1637726740148</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637726740148</updated>
+    </task>
+    <task id="LOCAL-00003" summary="+removed password from application.properties">
+      <created>1637727138201</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637727138201</updated>
+    </task>
+    <task id="LOCAL-00004" summary="+Start creating Product table">
+      <created>1637732976842</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637732976842</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="+Added H2 console to application.properties, and added to .gitignore&#10;&#10;+ Created Product Class &#10;&#10;+ Refactored main function" />
+    <MESSAGE value="+gitignore fix" />
+    <MESSAGE value="+removed password from application.properties" />
+    <MESSAGE value="+Start creating Product table" />
+    <option name="LAST_COMMIT_MESSAGE" value="+Start creating Product table" />
+  </component>
+</project>

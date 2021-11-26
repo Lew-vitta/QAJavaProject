@@ -1,14 +1,12 @@
 # QAJavaProject - SkateXut
 
+## Why did I do this?
 This is my final project for the QA Software Development Bootcamp. This project is a full CRUD functional api written in Spring. To demonstrate the Java skills learnt in the final weeks of the course.
 
 SkateXut is designed to be a shop interface for Creating, Reading, Updating, and Deleting products. With attributes such as Barcode, Name, Colour, Dimentions, Descriptions. Which will store persistent values using H2 database. This information can be relayed via the Java/SpringBoot backend. With a .jar included. Which can be run locally, and make use of port 8080 to be used for API - Requests can be made via Postman, screenshots provided below
 
 
 any dependencies it might need/build
-
-
-
 
 --------------------------------------------
 
@@ -49,6 +47,9 @@ Here once the program is restarted we can see the products are still avaliable j
 ![Tests](/Documentation/Test.png)
 --------------------------------------------
 
+## Risk Assessment
+[Risk Assessment](/Documentation/riskAssesment.pdf)
+
 ## Expectation
 Starting the project I had concerns about using databases, I was used to SQL but hadn't set-up, so I went with H2 as it would be less hassle to set up Within the short time frame. so I could spend more time getting to the meat of the challenge. 
 I expected it to be a challenge as it was my first time attempting a full java project and API. I was also concerned about testing as I know it's usually more time straining than writing the program itself. Doing everything documentation included would be a challenge to all get done in 5 days.
@@ -68,6 +69,6 @@ And also do a task that is exciting and more advanced. :)
 
 --------------------------------------------
 ## Jira
-https://qayeet.atlassian.net/jira/software/projects/QAJ/boards/3/roadmap?shared=&atlOrigin=eyJpIjoiNzFjNDg2MjliZDY1NGMxYjk4MWYxZTdiMWM5YzE3ZDUiLCJwIjoiaiJ9
+[Jira](https://qayeet.atlassian.net/jira/software/projects/QAJ/boards/3/roadmap?shared=&atlOrigin=eyJpIjoiNzFjNDg2MjliZDY1NGMxYjk4MWYxZTdiMWM5YzE3ZDUiLCJwIjoiaiJ9)
 
 - Lewis

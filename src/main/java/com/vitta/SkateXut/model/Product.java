@@ -44,12 +44,8 @@ public class Product {
     public Product() {
     }
 
-    public Product(int barcode, String productName) {
-        this.barcode = barcode;
-        this.productName = productName;
-    }
-
     public Product(int barcode, String productName, String description, String colour, String dimentions, String materials, int stock) {
+        super();
         this.barcode = barcode;
         this.productName = productName;
         this.description = description;
