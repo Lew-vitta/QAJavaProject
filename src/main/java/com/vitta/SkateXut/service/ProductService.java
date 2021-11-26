@@ -19,8 +19,9 @@ public class ProductService {
     @Autowired
     public ProductService(ProductRepository repo, ModelMapper mapper){
         super();
-        this.repo = repo;
         this.mapper = mapper;
+        this.repo = repo;
+
     }
 
     private ProductDTO mapToDTO(Product product) {
@@ -32,7 +33,6 @@ public class ProductService {
         try{repo.save(product);}catch (Exception e){
             throw new IllegalArgumentException();
         }
-        ;
         return true;
     }
 
@@ -63,21 +63,23 @@ public class ProductService {
 
     //update
     public boolean updateProduct(int barcode, Product updated) {
-        if(deleteByBarcode(barcode)) {
+        try{
+            deleteByBarcode(barcode);
             addProduct(updated);
             return repo.existsById(updated.getBarcode());
+        } catch (Exception e){
+            throw new IllegalArgumentException();
         }
-
-        return false;
-    }
+   }
 
     //delete
     public Boolean deleteByBarcode(Integer barcode) {
-        if (this.repo.existsById(barcode)) {
+        try {
+            this.repo.existsById(barcode);
             this.repo.deleteById(barcode);
-        } else {
+            return !this.repo.existsById(barcode);
+        }catch (Exception e){
             throw new EntityNotFoundException();
         }
-        return !this.repo.existsById(barcode);
     }
 }

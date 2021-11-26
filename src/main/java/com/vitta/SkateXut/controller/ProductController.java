@@ -47,6 +47,7 @@ public class ProductController {
     //Update
     @PostMapping("/updateProduct/{barcode}")
     public ResponseEntity<String> update(@PathVariable Integer barcode, @RequestBody Product product) {
+            service.updateProduct(barcode, product);
             return new ResponseEntity<>(barcode +" Updated", HttpStatus.ACCEPTED);
     }
 
@@ -54,6 +55,7 @@ public class ProductController {
     //Delete
     @DeleteMapping("/deleteProduct/{barcode}")
     public ResponseEntity<String> deleteProduct(@PathVariable int barcode) {
+        service.deleteByBarcode(barcode);
         return new ResponseEntity<>(barcode +" Deleted", HttpStatus.ACCEPTED);
     }
 
