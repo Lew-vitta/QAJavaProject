@@ -3,10 +3,12 @@ package com.vitta.SkateXut.model;
 import lombok.*;
 import javax.persistence.*;
 
+
+
 @Getter
 @Setter
 @ToString
-@Table(name = "Product")
+@Table(name = "product")
 @Entity
 public class Product {
 

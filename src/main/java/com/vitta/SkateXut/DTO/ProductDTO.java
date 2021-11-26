@@ -11,27 +11,25 @@ import org.hibernate.annotations.DynamicUpdate;
 @DynamicUpdate
 public class ProductDTO {
 
-    private int Barcode;
-    private String ProductName;
-    private String Description;
-    private String Colour;
-    private String Dimentions;
-    private String Materials;
-    private int Stock;
+    private int barcode;
+    private String productName;
+    private String description;
+    private String colour;
+    private String dimentions;
+    private String materials;
+    private int stock;
 
     public ProductDTO(){
         super();
     }
 
     public ProductDTO(int barcode, String productName, String description, String colour, String dimentions, String materials, int stock) {
-        this.Barcode = barcode;
-        this.ProductName = productName;
-        this.Description = description;
-        this.Colour = colour;
-        this.Dimentions = dimentions;
-        this.Materials = materials;
-        this.Stock = stock;
+        this.barcode = barcode;
+        this.productName = productName;
+        this.description = description;
+        this.colour = colour;
+        this.dimentions = dimentions;
+        this.materials = materials;
+        this.stock = stock;
     }
-
-
 }

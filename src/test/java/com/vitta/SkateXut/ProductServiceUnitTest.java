@@ -23,20 +23,20 @@ public class ProductServiceUnitTest {
 
     @Test
     void testCreate(){
-        Mockito.when(this.repo.save(ProductTestValues.urbanArttxStriker)).thenReturn(ProductTestValues.urbanArttxStrickerSave);
+        Mockito.when(this.repo.save(ProductTestValues.urbanArttxStriker)).thenReturn(ProductTestValues.urbanArttxStriker);
         Assertions.assertTrue(this.service.addProduct(ProductTestValues.urbanArttxStriker));
         Mockito.verify(this.repo, Mockito.times(1)).save(ProductTestValues.urbanArttxStriker);
     }
 
     @Test
     void readByBarcode(){
-        final int barcode = ProductTestValues.urbanArttxStrickerSave.getBarcode();
-
-        Mockito.when(this.repo.findById(barcode)).thenReturn(Optional.of(ProductTestValues.urbanArttxStrickerSave));
-        Assertions.assertEquals(this.service.getProductByBarcode(barcode),ProductTestValues.urbanArttxStrikerDTO);
+        final Integer barcode = ProductTestValues.urbanArttxStriker.getBarcode();
+        Mockito.when(this.repo.findById(barcode)).thenReturn(Optional.of(ProductTestValues.urbanArttxStriker));
+        Assertions.assertEquals(this.service.getProductByBarcode(barcode),ProductTestValues.urbanArttxStriker);
         Mockito.verify(this.repo, Mockito.times(1)).findAll();
-
     }
+
+
 
 
 }
