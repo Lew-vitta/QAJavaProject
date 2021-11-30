@@ -13,7 +13,6 @@ import javax.persistence.*;
 public class Product {
 
     @Id
-    @NonNull
     @Column(unique = true)
     private int barcode;
 
@@ -36,8 +35,7 @@ public class Product {
     @NonNull
     @Column
     private String materials;
-
-    @NonNull
+    
     @Column
     private int stock;
 
@@ -54,5 +52,5 @@ public class Product {
         this.materials = materials;
         this.stock = stock;
     }
-
+    
 }
